@@ -1,0 +1,162 @@
+:root {
+    /* ### Primary */
+
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* ### Neutral */
+
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+
+    /* fuente */
+    --fuente: 'Poppins', sans-serif;
+}
+
+/* globales */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1 rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuente);
+
+}
+
+div {
+    /* border: solid 1px red; */
+}
+
+img {
+    float: right;
+    margin-top: 2rem;
+    width: 5.1rem;
+}
+
+h1 {
+    color: var(--VeryDarkBlue);
+}
+
+p {
+    color: var(--GrayishBlue);
+    line-height: 2rem;
+}
+
+/* header */
+.header {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.header__titulo {
+    font-weight: 200;
+    line-height: .1rem;
+    color: var(--VeryDarkBlue);
+}
+
+
+/* texto */
+
+.contenedorPrincipal__texto {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    width: 28rem;
+    
+}
+
+@media (min-width: 768px) {
+    .contenedorPrincipal__texto{
+        width: 35rem;
+    }
+}
+
+/* mega caja y  sus hijos */
+.megaContainer {
+    /* border: 1px solid green; */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+
+
+}
+
+@media (min-width: 768px) {
+    .megaContainer {
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+        justify-content: center;
+        gap: 3rem;
+    }
+}
+
+.megaContainer__caja1,
+.megaContainer__caja2,
+.megaContainer__caja3,
+.megaContainer__caja4 {
+    width: 26rem;
+    padding: 1.5rem;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    -webkit-box-shadow: 0px 11px 20px -5px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 0px 11px 20px -5px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 11px 20px -5px rgba(0, 0, 0, 0.33);
+
+}
+
+.megaContainer__caja1 {
+    border-top: solid 3px var(--Cyan);
+}
+
+.megaContainer__caja2 {
+    border-top: solid 3px var(--Red);
+}
+
+.megaContainer__caja3 {
+    border-top: solid 3px var(--Orange);
+}
+
+.megaContainer__caja4 {
+    border-top: solid 3px var(--Blue);
+}
+
+
+@media (min-width: 768px) {
+    .megaContainer__caja1 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        align-self: center;
+        border-top: solid 3px var(--Cyan);
+    }
+
+    .megaContainer__caja2 {
+        border-top: solid 3px var(--Red);
+    }
+
+    .megaContainer__caja3 {
+        border-top: solid 3px var(--Orange);
+    }
+
+    .megaContainer__caja4 {
+        grid-column: 3/4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        align-self: center;
+        border-top: solid 3px var(--Blue);
+    }
+}
